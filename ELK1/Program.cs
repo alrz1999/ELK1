@@ -13,11 +13,10 @@ namespace ELK1
         static void Main(string[] args)
         {
             Printer printer = new Printer();
-            CsvReader reader = new CsvReader();
+            //CsvReader reader = new CsvReader();
             Uri uri = new Uri(ConfigurationManager.AppSettings["Search-Uri"]);
             ClientFactory clientFactory = new ClientFactory(uri,"document");
             IDocumentRepository<Document> clientRepository = new DocumentRepository(clientFactory.GetClient());
-            ElasticClient elastic = clientFactory.GetClient();
 
             while (true)
             {

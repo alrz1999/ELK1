@@ -44,6 +44,7 @@ namespace ELK1.Repository
                     .Match(m => m
                         .Field(f => f.Text)
                         .Query(phrase)
+                        .Fuzziness(Fuzziness.Auto)
                     )
                 )
             ).Documents.ToList();
