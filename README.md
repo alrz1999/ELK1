@@ -1,5 +1,5 @@
-Full-Text search engine with elasticSearch
+### Full-Text search engine with ElasticSearch
 
 Required Packages : 
-1-CsvHelper
-2-Nest
+1. CsvHelper
+2. Nest
