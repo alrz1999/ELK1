@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace ELK1.Repository
 {
-    public class ClientRepository : IClientRepository<Document>
+    public class DocumentRepository : IDocumentRepository<Document>
     {
-        private ElasticClient client;
+        private Client client;
 
-        public ClientRepository(Client client)
+        public DocumentRepository(Client client)
         {
             this.client = client;
         }

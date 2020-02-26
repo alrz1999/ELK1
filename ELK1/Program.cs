@@ -16,7 +16,8 @@ namespace ELK1
             CsvReader reader = new CsvReader();
             Uri uri = new Uri(ConfigurationManager.AppSettings["Search-Uri"]);
             ClientFactory clientFactory = new ClientFactory(uri,"document");
-            IClientRepository<Document> clientRepository = new ClientRepository(clientFactory.GetClient());
+            IDocumentRepository<Document> clientRepository = new DocumentRepository(clientFactory.GetClient());
+            ElasticClient elastic = clientFactory.GetClient();
 
             while (true)
             {

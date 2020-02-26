@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ELK1.Repository
 {
-    public interface IClientRepository<T>
+    public interface IDocumentRepository<T>
     {
         void index(T document);
 

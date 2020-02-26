@@ -70,8 +70,8 @@
   <ItemGroup>
     <Compile Include="Factory\Client.cs" />
     <Compile Include="Factory\ClientFactory.cs" />
-    <Compile Include="Repository\ClientRepository.cs" />
-    <Compile Include="Repository\IClientRepository.cs" />
+    <Compile Include="Repository\DocumentRepository.cs" />
+    <Compile Include="Repository\IDocumentRepository.cs" />
     <Compile Include="Models\Document.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
