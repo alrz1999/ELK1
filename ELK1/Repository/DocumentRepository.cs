@@ -11,7 +11,7 @@ namespace ELK1.Repository
 {
     public class DocumentRepository : IDocumentRepository<Document>
     {
-        private Client client;
+        private readonly Client client;
 
         public DocumentRepository(Client client)
         {
@@ -27,12 +27,12 @@ namespace ELK1.Repository
             return client.Get<Document>(id).Source;
         }
 
-        public void index(Document document)
+        public void Index(Document document)
         {
             client.IndexDocument<Document>(document);
         }
 
-        public void indexMany(List<Document> documents)
+        public void IndexMany(IEnumerable<Document> documents)
         {
             client.IndexMany<Document>(documents);
         }

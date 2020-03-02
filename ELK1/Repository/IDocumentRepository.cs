@@ -9,9 +9,9 @@ namespace ELK1.Repository
 {
     public interface IDocumentRepository<T>
     {
-        void index(T document);
+        void Index(T document);
 
-        void indexMany(List<T> documents);
+        void IndexMany(IEnumerable<T> documents);
 
         void Delete(string id);
 

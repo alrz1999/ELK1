@@ -16,12 +16,12 @@ namespace ELK1
             //CsvReader reader = new CsvReader();
             Uri uri = new Uri(ConfigurationManager.AppSettings["Search-Uri"]);
             ClientFactory clientFactory = new ClientFactory(uri,"document");
-            IDocumentRepository<Document> clientRepository = new DocumentRepository(clientFactory.GetClient());
+            IDocumentRepository<Document> documentRepository = new DocumentRepository(clientFactory.GetClient());
 
             while (true)
             {
                 var queryString = Console.ReadLine();
-                var result = clientRepository.Search(queryString);
+                var result = documentRepository.Search(queryString);
                 printer.Print(result);
             }
 
